@@ -1,0 +1,26 @@
+Overview
+
+These are APIs that Spring Boot App will export:
+
+Methods	Urls	Actions
+POST    /api/tutorials	                create new Tutorial
+GET     /api/tutorials	                retrieve all Tutorials
+GET     /api/tutorials/:id	            retrieve a Tutorial by :id
+PUT     /api/tutorials/:id	            update a Tutorial by :id
+DELETE  /api/tutorials/:id	            delete a Tutorial by :id
+DELETE	/api/tutorials	                delete all Tutorials
+GET     /api/tutorials?title=[keyword]	find all Tutorials which title contains keyword
+
+– We make CRUD operations & finder methods with Spring Data JPA’s JpaRepository.
+
+
+Methods	Urls	Actions
+POST	/api/tutorials/:id/details	create new Details for a Tutorial
+GET	/api/details/:id	retrieve Details by :id
+GET	/api/tutorials/:id/details	retrieve Details of a Tutorial
+PUT	/api/details/:id	update Details by :id
+PUT	/api/tutorials/:id/details	update Details of a Tutorial
+DELETE	/api/details/:id	delete Details by :id
+DELETE	/api/tutorials/:id/details	delete Details of a Tutorial
+DELETE	/api/tutorials/:id	delete a Tutorial (and its Details)
+
