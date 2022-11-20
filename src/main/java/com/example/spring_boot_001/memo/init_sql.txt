@@ -1,0 +1,2 @@
+INSERT INTO public.tutorials (id, created_at, updated_at, description, level, published, title) VALUES (1, '2022-11-19 16:07:34.000000', '2022-11-19 16:07:37.000000', 'desc-1', 1, true, 'title-1');
+INSERT INTO public.tutorials (id, created_at, updated_at, description, level, published, title) VALUES (2, '2022-11-19 19:13:51.000000', '2022-11-19 19:13:54.000000', 'desc-2', 2, true, 'title-2');

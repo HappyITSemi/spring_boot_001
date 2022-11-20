@@ -1,7 +1,7 @@
 Overview
 
 These are APIs that Spring Boot App will export:
-
+--- one table
 Methods	Urls	Actions
 POST    /api/tutorials	                create new Tutorial
 GET     /api/tutorials	                retrieve all Tutorials
@@ -13,7 +13,7 @@ GET     /api/tutorials?title=[keyword]	find all Tutorials which title contains k
 
 – We make CRUD operations & finder methods with Spring Data JPA’s JpaRepository.
 
-
+--- one to one
 Methods	Urls	Actions
 POST	/api/tutorials/:id/details	create new Details for a Tutorial
 GET	/api/details/:id	retrieve Details by :id
@@ -23,4 +23,31 @@ PUT	/api/tutorials/:id/details	update Details of a Tutorial
 DELETE	/api/details/:id	delete Details by :id
 DELETE	/api/tutorials/:id/details	delete Details of a Tutorial
 DELETE	/api/tutorials/:id	delete a Tutorial (and its Details)
+
+--- one to many
+Methods	Urls	Actions
+POST	/api/tutorials/:id/comments	create new Comment for a Tutorial
+GET	/api/tutorials/:id/comments	retrieve all Comments of a Tutorial
+GET	/api/comments/:id	retrieve a Comment by :id
+PUT	/api/comments/:id	update a Comment by :id
+DELETE	/api/comments/:id	delete a Comment by :id
+DELETE	/api/tutorials/:id	delete a Tutorial (and its Comments) by :id
+DELETE	/api/tutorials/:id/comments	delete all Comments of a Tutorial
+
+
+--- many to many
+
+Methods	Urls	Actions
+POST	/api/tutorials/:id/tags	create/add Tag for a Tutorial
+GET	/api/tutorials/:id/tags	retrieve all Tags of a Tutorial
+GET	/api/tags/:id/tutorials	retrieve all Tutorials of a Tag
+GET	/api/tutorials	retrieve all Tutorials
+GET	/api/tutorials/:id	retrieve a Tutorial with it Tags
+GET	/api/tags	retrieve all Tags
+GET	/api/tags/:id	retrieve a Tag by :id
+PUT	/api/tags/:id	update a Tag by :id
+DELETE	/api/tags/:id	delete a Tag by :id
+DELETE	/api/tutorials/:id	delete a Tutorial by :id
+DELETE	/api/tutorials/:id/tags/:id	delete a Tag from a Tutorial by :id
+
 
